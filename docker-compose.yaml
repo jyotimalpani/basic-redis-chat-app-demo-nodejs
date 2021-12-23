@@ -5,7 +5,7 @@ services:
             context: .
             dockerfile: Dockerfile
         environment:
-            REDIS_ENDPOINT_URL: "chatapp2_redisapp:6379"
+            REDIS_ENDPOINT_URL: "redishost:6379"
             REDIS_PASSWORD: "password"
             PORT: "9000"
         ports:
@@ -16,6 +16,7 @@ services:
             - custom_network
     redisapp:
         image: redis
+        hostname: redishost
         volumes:
             - "db_data:/var/lib/redis-volume"
         ports:
