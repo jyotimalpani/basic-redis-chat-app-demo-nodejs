@@ -6,7 +6,7 @@ services:
             context: ./chatapp
             dockerfile: Dockerfile
         environment:
-            REDIS_ENDPOINT_URL: "redishost:6379"
+            REDIS_ENDPOINT_URL: "chatapp_redisapp:6379"
             REDIS_PASSWORD: "password"
             PORT: "9000"
         ports:
