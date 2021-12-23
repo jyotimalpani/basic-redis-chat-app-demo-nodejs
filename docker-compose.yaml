@@ -26,4 +26,5 @@ services:
         db_data:
     networks:
         custom_network:
+            driver: bridge
             
