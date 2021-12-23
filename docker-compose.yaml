@@ -1,9 +1,8 @@
 version: '3.3'
 services:
     chatapp:        
-        build:
-            context: .
-            dockerfile: Dockerfile
+        image: chatapp
+        build: Dockerfile           
         environment:
             REDIS_ENDPOINT_URL: "redisapp:6379"
             REDIS_PASSWORD: "password"
