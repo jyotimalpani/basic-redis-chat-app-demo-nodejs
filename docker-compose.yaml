@@ -1,9 +1,8 @@
 version: '3.3'
 services:
     chatapp:        
-        image: chatapp
         build:
-            context: ./chatapp
+            context: ./basicredischatappdemonodejs_chatapp
             dockerfile: Dockerfile
         environment:
             REDIS_ENDPOINT_URL: "chatapp_redisapp:6379"
