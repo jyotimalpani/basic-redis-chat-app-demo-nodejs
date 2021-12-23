@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-    web:
+    chatapp:
         build:
             context: .
             dockerfile: Dockerfile
@@ -14,7 +14,7 @@ services:
             - db
         networks:
             - custom_network
-    db:
+    redis:
         image: redis
         container_name: redis-dev
         hostname: redis-host
