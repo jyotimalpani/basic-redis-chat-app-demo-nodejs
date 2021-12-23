@@ -7,7 +7,6 @@ services:
             dockerfile: Dockerfile           
         environment:
             REDIS_ENDPOINT_URL: "redisapp:6379"
-            REDIS_PASSWORD: "password"
             PORT: "9000"
         ports:
             - "9000:9000"
