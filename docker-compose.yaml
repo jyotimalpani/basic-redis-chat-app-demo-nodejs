@@ -21,7 +21,7 @@ services:
             - "db_data:/var/lib/redis-volume"
         ports:
             - "3306:3306"
-            - "33060:33060
+            - "33060:33060"
 volumes:
     db_data:
 networks:
