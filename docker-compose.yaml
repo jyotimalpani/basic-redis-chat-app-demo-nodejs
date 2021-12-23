@@ -11,10 +11,10 @@ services:
         ports:
             - "0:8080"
         depends_on:
-            - db
+            - redisapp
         networks:
             - custom_network
-    redis:
+    redisapp:
         image: redis
         container_name: redis-dev
         hostname: redis-host
