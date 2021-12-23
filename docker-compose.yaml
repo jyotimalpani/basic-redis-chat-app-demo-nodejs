@@ -21,7 +21,10 @@ services:
         ports:
             - "6379:6379"
             - "63790:63790"
+        networks:
+            - custom_network
 volumes:
     db_data:
 networks:
     custom_network:
+        driver: overlay
