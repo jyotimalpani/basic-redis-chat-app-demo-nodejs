@@ -4,7 +4,6 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-        container_name: chatapp-dev
         environment:
             REDIS_ENDPOINT_URL: "redisapp:6379"
             REDIS_PASSWORD: "password"
@@ -17,7 +16,6 @@ services:
             - custom_network
     redisapp:
         image: redis
-        container_name: redis-dev
         volumes:
             - "db_data:/var/lib/redis-volume"
         ports:
